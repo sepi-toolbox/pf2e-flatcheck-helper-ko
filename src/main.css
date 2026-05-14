@@ -25,7 +25,8 @@
 }
 
 .initiative-delay,
-.initiative-return {
+.initiative-return,
+.initiative-delay-indicator {
 	height: var(--input-height);
 	width: var(--input-height);
 
@@ -39,21 +40,23 @@
 	border-radius: 4px;
 
 	cursor: pointer;
+
+	.fa-play {
+		display: none;
+	}
+	.delay-indicator {
+		animation: rotating 4s linear infinite;
+		padding: 4px;
+	}
 }
 
-.initiative-return .fa-play {
-	display: none;
-}
-.initiative-return .delay-indicator {
-	animation: rotating 4s linear infinite;
-	padding: 4px;
-}
-
-.initiative-return:hover .fa-play {
-	display: unset !important;
-}
-.initiative-return:hover .delay-indicator {
-	display: none !important;
+.initiative-return {
+	&:hover .fa-play {
+		display: unset !important;
+	}
+	&:hover .delay-indicator {
+		display: none !important;
+	}
 }
 
 #pf2e-hud-tracker {

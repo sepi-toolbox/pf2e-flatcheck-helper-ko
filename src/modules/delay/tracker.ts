@@ -39,17 +39,18 @@ function drawButton(
 			: translate("delay.delaying")
 		const cls = MODULE.settings.allowReturn ? "initiative-return" : "initiative-delay-indicator"
 		buttonHTML = parseHTML(`
-      <div class="initiative-return" class="${cls}" title="${title}">
+      <div class="${cls}" title="${title}">
         <img class="delay-indicator" src="icons/svg/clockwork.svg"></img>
         <i class="fa-solid fa-play"></i>
       </div>
     `)
 	}
 
-	buttonHTML.firstElementChild?.addEventListener("click", (e) => {
-		e.stopPropagation()
-		handleRequest({ combatant, type })
-	})
+	if (MODULE.settings.allowReturn)
+		buttonHTML.firstElementChild?.addEventListener("click", (e) => {
+			e.stopPropagation()
+			handleRequest({ combatant, type })
+		})
 
 	const initiativeDiv = combatantHtml.querySelector<HTMLElement>(".token-initiative")
 	if (initiativeDiv) initiativeDiv.style.display = "none"
