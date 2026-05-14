@@ -100,5 +100,20 @@ export default defineConfig(({ command: _buildOrServe }) => ({
 				}
 			},
 		},
+		{
+			name: "wrap-css-layer-build",
+			apply: "build",
+			enforce: "post",
+			generateBundle(_options, bundle) {
+				for (const [fileName, asset] of Object.entries(bundle)) {
+					if (asset.type !== "asset" || !fileName.endsWith(".css")) continue
+					const source =
+						typeof asset.source === "string"
+							? asset.source
+							: Buffer.from(asset.source).toString("utf8")
+					asset.source = `@layer modules.pf2e-fc{${source}}`
+				}
+			},
+		},
 	],
 }))
