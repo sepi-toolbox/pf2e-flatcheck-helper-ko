@@ -128,6 +128,17 @@ export class TargetFlatCheckHelper {
 		) {
 			const lightCheck = conditionFromLightLevel(this.origin?.actor ?? null, this.target.object)
 			if (lightCheck) sources.push(lightCheck)
+
+			if (this.origin.level !== this.target.level) {
+				sources.push({
+					type: "unknown",
+					origin: {
+						slug: "scene-level",
+						label: "Levels",
+						warning: "warning.differentLevels",
+					},
+				})
+			}
 		}
 
 		return sources

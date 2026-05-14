@@ -9,7 +9,7 @@ import { type BaseTargetFlatCheck, TargetFlatCheckHelper } from "./target"
 
 export interface FlatCheckSource {
 	type: string
-	origin?: { label?: string; slug: string; reasons?: string[] }
+	origin?: { label?: string; slug: string; reasons?: string[]; warning?: string }
 	baseDc: number | null
 }
 
@@ -234,7 +234,7 @@ export class FlatCheckHelper {
 					dcAdjustments: adjustments,
 				}
 			}),
-			R.firstBy([(d) => d.finalDc ?? -Infinity, "desc"]),
+			R.firstBy([(d) => d.finalDc ?? Infinity, "desc"]),
 		)
 	}
 }
