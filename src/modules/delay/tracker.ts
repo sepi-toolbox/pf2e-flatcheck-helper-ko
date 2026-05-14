@@ -7,7 +7,7 @@ import { isDelaying } from "./utils"
 export function onRenderCombatTracker(_tracker, html: HTMLElement, _data) {
 	if (!MODULE.settings.showInCombatTracker) return
 	const combat = game.combat
-	if (!combat || !combat.started) return
+	if (!combat?.started) return
 
 	const combatantElements = html.querySelectorAll<HTMLElement>("li.combatant")
 	for (const el of combatantElements) {

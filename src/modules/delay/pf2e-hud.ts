@@ -14,7 +14,7 @@ export function onRenderPF2eHudTracker(app, tracker: HTMLElement) {
 		const id = el.dataset.combatantId
 		if (!id) continue
 		const c = combat.combatants.get(id)
-		if (!c || !c.isOwner || c.initiative == null) continue
+		if (!c?.isOwner || c.initiative == null) continue
 
 		let delayElement: HTMLElement | null = null
 		if (game.user.isGM) delayElement = el.querySelector<HTMLLinkElement>("div.extras a.delay")

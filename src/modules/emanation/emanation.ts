@@ -88,7 +88,7 @@ async function extractEffects(item: SpellPF2e) {
 async function onChatMessage(msg: ChatMessagePF2e, html: HTMLElement) {
 	if (!MODULE.settings.emanationAutomation) return
 	if (!game.user.isGM) return
-	if (!msg.item || !msg.item.isOfType("spell")) return
+	if (!msg.item?.isOfType("spell")) return
 	const spell = msg.item
 	const range = spell.system.area?.type === "emanation" ? spell.system.area?.value : null
 	const token = msg.actor?.getActiveTokens().at(0)

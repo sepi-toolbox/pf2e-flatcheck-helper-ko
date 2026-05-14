@@ -1,14 +1,14 @@
 <form {onsubmit} class="p-2">
 	<div class="flex flex-col items-center">
 		<strong>{translate("delay.dialog.delay-after")}</strong>
-		<div class="py-3 overflow-y-auto overflow-x-visible max-h-[500px]">
+		<div class="py-3 overflow-y-auto overflow-x-visible max-h-125">
 			{#each turns as t,i}
 				{@const disabled=disabledTurns.includes(i)}
 				{@const isSelf=t===combatant}
 				{@const isSelected=t.id === selected}
 				<div
 				  class={[
-						"flex items-center h-[50px] pl-1 pr-2 border",
+						"flex items-center h-12.5 pl-1 pr-2 border",
 						disabled ? "cursor-not-allowed rounded-none" : "cursor-pointer rounded-sm",
 						isSelf ? "dark:bg-green-300/20 bg-green-600/20 border-green-400" :
 						disabled ? "dark:bg-white/10 bg-black/10 border-transparent" :
@@ -17,7 +17,7 @@
 					onclick={() => { if (!disabled) selected = t.id }}
 				>
 					<img class="h-full p-0.5" {...imgPropsForToken(t.token!.object!)} inert>
-					<p class="grow overflow-hidden text-ellipsis max-w-[20ch] max-h-[48px] ml-0.5" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{displayName(t)}</p>
+					<p class="grow overflow-hidden text-ellipsis max-w-[20ch] max-h-12 ml-0.5" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{displayName(t)}</p>
 					<p class="ml-3">{t.initiative}</p>
 				</div>
 				{:else}

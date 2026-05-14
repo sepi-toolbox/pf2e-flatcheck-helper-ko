@@ -313,8 +313,8 @@ export const settings = {
 			default: false,
 		})
 
-		Hooks.on("updateSetting", onUpdateSetting)
-		Hooks.on("renderSettingsConfig", onRenderSettingsConfig)
+		Hooks.on("updateSetting", onUpdateSetting as any)
+		Hooks.on("renderSettingsConfig", onRenderSettingsConfig as any)
 	},
 
 	addListener(key: string, callback: Callback) {

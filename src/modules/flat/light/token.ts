@@ -61,7 +61,7 @@ class Cache {
 			this.registerHook("canvasTearDown", () => this.invalidateAll())
 			this.registerHook(
 				"lightingRefresh",
-				foundry.utils.debounce(() => this.invalidateAll(), 50),
+				foundry.utils.debounce<any>(() => this.invalidateAll(), 50),
 			)
 			this.registerHook("updateToken", (token: TokenDocumentPF2e, changes: any) => {
 				if (
