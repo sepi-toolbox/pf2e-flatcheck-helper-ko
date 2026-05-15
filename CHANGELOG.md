@@ -1,7 +1,14 @@
 # Changelog
 🥭
 
-## [Unreleased]
+## [0.21.0] - 2026-05-15
+Minimum Core/System version is now 14.361/8.1.0
+
+### Added
+- Warning when light levels flat checks are enabled, and origin and target are on different scene levels
+
+### Fixed
+- "Disable Returning" delay setting not working
 
 ## [0.20.3] - 2026-04-15
 ### Fixed
@@ -204,7 +211,8 @@ Foundry v13 release
 ### Fixed
 - Flat checks showing on damage/healing received messages
 
-[Unreleased]: https://github.com/oWave/pf2e-flatcheck-helper/compare/v0.20.3...HEAD
+[Unreleased]: https://github.com/oWave/pf2e-flatcheck-helper/compare/v0.21.0...HEAD
+[0.21.0]: https://github.com/oWave/pf2e-flatcheck-helper/compare/v0.20.3...v0.21.0
 [0.20.3]: https://github.com/oWave/pf2e-flatcheck-helper/compare/v0.20.2...v0.20.3
 [0.20.2]: https://github.com/oWave/pf2e-flatcheck-helper/compare/v0.20.1...v0.20.2
 [0.20.1]: https://github.com/oWave/pf2e-flatcheck-helper/compare/v0.20.0...v0.20.1
