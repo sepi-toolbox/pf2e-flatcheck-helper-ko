@@ -88,7 +88,6 @@ export function darknessAtPoint(x: number, y: number): number {
 		if (d <= l.data.dim) lightSourceLevel = 0.5
 	}
 
-	// @ts-expect-error
 	const globalIlluminationLevel = canvas.effects.getDarknessLevel({ x, y, elevation: 0 })
 
 	return Math.min(lightSourceLevel, globalIlluminationLevel)
