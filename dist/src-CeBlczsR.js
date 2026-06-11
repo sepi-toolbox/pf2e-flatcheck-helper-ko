@@ -181,7 +181,7 @@ async function _(e) {
 	r || (t?.actor && f(t.actor) ? r = "return" : t === n.combatant && (r = "delay")), r === "delay" ? ee(e) : r === "return" && ne(e);
 }
 function ee(e) {
-	$.settings.delayShouldPrompt ? import("./apps-ByB7o6q2.js").then((t) => new t.DelayPromptDialog(e.combatant).render(!0)) : (te(e), e.combatant.parent?.nextTurn());
+	$.settings.delayShouldPrompt ? import("./apps-yaFyXDxY.js").then((t) => new t.DelayPromptDialog(e.combatant).render(!0)) : (te(e), e.combatant.parent?.nextTurn());
 }
 function te({ combatant: e, skipMessage: t }) {
 	!t && e.token && v(e.token, "delay"), e.actor && re(e.actor);
@@ -2556,7 +2556,7 @@ function cn(t, n) {
 			</button>
 		</div>`);
 	s.querySelector("button")?.addEventListener("click", async () => {
-		let { GuideApp: e } = await import("./app-DA2L0wvf.js");
+		let { GuideApp: e } = await import("./app-CGhDbjTG.js");
 		new e().render(!0);
 	}), r.prepend(s);
 }
@@ -2608,4 +2608,4 @@ Hooks.on("init", () => {
 //#endregion
 export { u as a, h as i, k as n, e as o, te as r, $ as t };
 
-//# sourceMappingURL=src-BBcyJme0.js.map
+//# sourceMappingURL=src-CeBlczsR.js.map

@@ -7,19 +7,19 @@
 			},
 			"manipulate": {
 				"label": "조작",
-				"note": "붙들림 상태에서 조작 행동"
+				"note": "붙잡힌 상태에서 조작 행동"
 			},
 			"deafened": {
-				"label": "귀먹음",
-				"note": "귀먹음 상태에서 청각 행동"
+				"label": "귀가 먼",
+				"note": "귀가 먼 상태에서 청각 행동"
 			},
 			"deafened-spellcasting": {
-				"label": "귀먹음 - 주문시전",
+				"label": "귀가 먼 - 주문시전",
 				"note": "은밀하지 않은 주문은 주문 영창이 필요하며, 모든 말은 청각 특성을 갖습니다."
 			},
 			"target": {
 				"label": "대상",
-				"note": "은닉/은신/현혹/시각상실 등. PF2e Visioner 지원"
+				"note": "가려진/숨은/눈부신/실명 등. PF2e Visioner 지원"
 			},
 			"light-level": {
 				"label": "대상 - 광원 수준",
@@ -178,12 +178,12 @@
 			"flat-check": "단순 판정",
 			"target-marker-dc": "DC {dc} - {label}",
 			"source": {
-				"blinded": "시각상실",
+				"blinded": "실명",
 				"darkness": "어둠",
-				"hidden": "은신",
+				"hidden": "숨은",
 				"dim-light": "약한 빛",
-				"dazzled": "현혹",
-				"concealed": "은닉",
+				"dazzled": "눈부신",
+				"concealed": "가려진",
 				"magical-darkness": "마법 어둠"
 			},
 			"message": {
@@ -196,8 +196,8 @@
 				"reroll-higher-result": "재굴림 후 높은 결과 유지",
 				"button-reroll": "재굴림",
 				"button-cancel": "취소",
-				"grabbed": "붙들림",
-				"deafened": "귀먹음",
+				"grabbed": "붙잡힌",
+				"deafened": "귀가 먼",
 				"stupefied": "혼미 {value}",
 				"dc": "DC {value}",
 				"hide": {
@@ -236,8 +236,8 @@
 		},
 		"template": {
 			"buttons": {
-				"grabbed-concealed": "붙들림<br>은닉",
-				"hidden-invisible-confused": "은신<br>투명<br>혼란",
+				"grabbed-concealed": "붙잡힌<br>가려진",
+				"hidden-invisible-confused": "숨은<br>투명한<br>혼란",
 				"dc": "DC {value}"
 			},
 			"emanation-request": {
