@@ -1,6 +1,6 @@
 <h3 class="ml-4">PF2e Utility Buttons</h3>
 
-Select a tab on the left.
+왼쪽에서 탭을 선택하세요.
 
 {#if import.meta.env.DEV}
 	<div class="flex flex-col">

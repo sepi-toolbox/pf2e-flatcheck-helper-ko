@@ -50,19 +50,19 @@ function verifySettingsDialog() {
 	if (!game.user.isGM || !game.settings.get(SYSTEM.id, "metagame_showBreakdowns")) return
 
 	new foundry.applications.api.DialogV2({
-		window: { title: "PF2e Utility Buttons - Alternative Roll Breakdowns" },
+		window: { title: "PF2e Utility Buttons - 대체 굴림 내역" },
 		content: `
-     <p>Alternative Roll Breakdowns need the "Show Roll Breakdowns" system metagame setting to be disabled.</p>
+     <p>대체 굴림 내역을 사용하려면 "굴림 내역 표시" 시스템 메타게임 설정을 비활성화해야 합니다.</p>
     `,
 		buttons: [
 			{
 				action: "disable",
-				label: "Disable Alternative Roll Breakdowns",
+				label: "대체 굴림 내역 비활성화",
 				callback: () => game.settings.set(MODULE_ID, "script-alt-roll-breakdown", false),
 			},
 			{
 				action: "enable",
-				label: "Disable system setting",
+				label: "시스템 설정 비활성화",
 				default: true,
 				callback: () => game.settings.set(SYSTEM.id, "metagame_showBreakdowns", false),
 			},

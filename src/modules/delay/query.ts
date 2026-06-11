@@ -19,9 +19,9 @@ export async function sendGmMoveQuery(data: GmMoveQueryData) {
 			await game.users.activeGM?.query(QUERIES.delay.gmMoveAfter, data)
 		}
 	} catch (e) {
-		const note = game.user.isGM ? "" : " (gm and player)"
+		const note = game.user.isGM ? "" : " (GM 및 플레이어)"
 		ui.notifications.error(
-			`Encounted error while updating initiative. Check console${note} for details.`,
+			`우선권 업데이트 중 오류가 발생했습니다. 자세한 내용은 콘솔${note}을 확인하세요.`,
 		)
 		console.error(e)
 	}

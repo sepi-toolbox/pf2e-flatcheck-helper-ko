@@ -134,7 +134,7 @@ export class TargetFlatCheckHelper {
 					type: "unknown",
 					origin: {
 						slug: "scene-level",
-						label: "Levels",
+						label: "층",
 						warning: "warning.differentLevels",
 					},
 				})

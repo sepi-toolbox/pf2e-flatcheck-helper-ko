@@ -13,8 +13,8 @@
 		{#if store.dirty}
 			<div class="absolute bottom-2 left-1/2 -translate-x-1/2 py-1 px-4 rounded-xl border-2 bg-gray-200 dark:bg-gray-800" transition:slide={{ duration: 200 }}>
 				<div class="flex gap-2 items-center">
-					<span>Unsaved Changes</span>
-					<button class="w-auto!" onclick={() => store.commit()}>Save</button>
+					<span>저장되지 않은 변경 사항</span>
+					<button class="w-auto!" onclick={() => store.commit()}>저장</button>
 				</div>
 			</div>
 		{/if}
@@ -32,12 +32,12 @@ import Misc from "./content/misc.svelte"
 import { getStore } from "./setting.svelte"
 
 const tabs = [
-	{ name: "Intro", content: Intro, hidden: true },
-	{ name: "Flat Checks", content: Flat },
-	{ name: "Delay", content: Delay },
-	{ name: "HP Transfer", content: HpTransfer },
-	{ name: "Emanation Automation", content: Emanation },
-	{ name: "Miscellaneous", content: Misc },
+	{ name: "소개", content: Intro, hidden: true },
+	{ name: "단순 판정", content: Flat },
+	{ name: "지연", content: Delay },
+	{ name: "HP 이전", content: HpTransfer },
+	{ name: "발산 자동화", content: Emanation },
+	{ name: "기타", content: Misc },
 ]
 let selected = $state(0)
 const Content = $derived(tabs[selected].content)

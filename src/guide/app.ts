@@ -8,7 +8,7 @@ export class GuideApp extends SvelteMixin(foundry.applications.api.ApplicationV2
 
 	static override DEFAULT_OPTIONS: DeepPartial<ApplicationConfiguration> = {
 		window: {
-			title: "Utility Buttons Guide",
+			title: "유틸리티 버튼 가이드",
 			resizable: true,
 		},
 		position: {

@@ -1,28 +1,28 @@
-<h3 class="ml-4">Emanation Automation</h3>
+<h3 class="ml-4">발산 자동화</h3>
 
 <div class="grid grid-cols-2 gap-2 gap-y-4 items-center">
 
 	<div class="col-span-2 mx-[10%]">
-		<p>Adds a button to emanation spells that applies the spell effect to all tokens in the area.</p>
-		<SettingInput key="emanation-automation" label="Enabled"></SettingInput>
+		<p>발산 주문에 영역 내 모든 토큰에 주문 효과를 적용하는 버튼을 추가합니다.</p>
+		<SettingInput key="emanation-automation" label="활성화"></SettingInput>
 
 		<p>
-			The Spell Config only shows when the spell has no defense (passive or saving throw) and the area is set to emanation. <br>
-			The "Apply emanation effect" button is visible to GMs if "Apply to" is configured.
+			주문에 방어(수동 또는 내성 굴림)가 없고 영역이 발산으로 설정된 경우에만 주문 설정이 표시됩니다. <br>
+			"적용 대상"이 설정된 경우 GM에게 "발산 효과 적용" 버튼이 표시됩니다.
 		</p>
 	</div>
 	<figure class="col-span-2">
 		<img src={ImgConfig}>
-		<figcaption>Spell Config</figcaption>
+		<figcaption>주문 설정</figcaption>
 	</figure>
 	<div class="col-span-2 justify-self-center flex gap-2 items-center">
 		<figure>
 			<img src={ImgChatCard}>
-			<figcaption>Emanation Spell in Chat</figcaption>
+			<figcaption>채팅의 발산 주문</figcaption>
 		</figure>
 		<figure>
 			<img src={ImgDialog}>
-			<figcaption>Emanation Apply Dialog</figcaption>
+			<figcaption>발산 적용 다이얼로그</figcaption>
 		</figure>
 	</div>
 </div>

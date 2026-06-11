@@ -412,11 +412,11 @@ function onRenderSettingsConfig(app: SettingsConfig, html: HTMLFormElement) {
 				?.querySelector<HTMLElement>("p.hint")
 				?.insertAdjacentHTML(
 					"afterbegin",
-					`<span style="color: var(--color-level-error)">Requires libwrapper. </span>`,
+					`<span style="color: var(--color-level-error)">libwrapper 필요. </span>`,
 				)
 			const input = tab.querySelector<HTMLInputElement>(`input[name="${MODULE_ID}.${key}"]`)
 			if (input) {
-				input.title = "Requires lib-wrapper"
+				input.title = "lib-wrapper 필요"
 				input.disabled = true
 				input.indeterminate = true
 				input.style.cursor = "not-allowed"

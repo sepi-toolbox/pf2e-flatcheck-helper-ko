@@ -168,7 +168,7 @@ async function spellSheetRenderWrapper(this: SpellSheetPF2e, wrapped, ...args) {
 	try {
 		if (MODULE.settings.emanationAutomation) await spellSheetRenderInner(this, $html)
 	} catch (e) {
-		ui.notifications.error("Could not insert emanation automation into spell sheet.")
+		ui.notifications.error("주문 시트에 발산 자동화를 삽입하지 못했습니다.")
 		console.error(e)
 	}
 

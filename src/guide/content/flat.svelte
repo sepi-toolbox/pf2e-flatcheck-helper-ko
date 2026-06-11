@@ -1,56 +1,56 @@
-<h3 class="ml-4">Flat Checks</h3>
+<h3 class="ml-4">단순 판정</h3>
 
 <main>
 	<SettingSection>
 		<img src="{FlatInMessage}">
 		<div class="justify-self-start">
-			<h5>Flat Checks in Messages</h5>
+			<h5>메시지의 단순 판정</h5>
 			<p>
-				Adds flat checks on Strikes, Spells and some other chat messages.
+				타격, 주문 및 기타 채팅 메시지에 단순 판정을 추가합니다.
 			</p>
-			<SettingInput key="flat-check-in-message" label="Enabled" />
+			<SettingInput key="flat-check-in-message" label="활성화" />
 
-			<h5>Auto-Roll Flat Checks</h5>
-			<SettingInput key="flat-check-auto-roll" label="Mode" />
-			<SettingInput key="flat-check-auto-roll-user" label="Enabled" />
+			<h5>단순 판정 자동 굴림</h5>
+			<SettingInput key="flat-check-auto-roll" label="모드" />
+			<SettingInput key="flat-check-auto-roll-user" label="활성화" />
 		</div>
 	</SettingSection>
 
 	<SettingSection>
 		<img src="{FlatHiddenRoll}">
 		<div class="justify-self-start">
-			<h5>Hide Results</h5>
-			<p>If a roll requires flat checks, the results will be hidden until revealed.</p>
-			<SettingInput key="flat-check-hide-roll" label="Enabled" />
+			<h5>결과 숨기기</h5>
+			<p>굴림에 단순 판정이 필요한 경우, 공개 전까지 결과가 숨겨집니다.</p>
+			<SettingInput key="flat-check-hide-roll" label="활성화" />
 			<hr>
-			<SettingInput key="flat-check-hide-roll-auto-reveal" label="Auto-Reveal" />
-			<span>Automatically reveals the result when all flat checks succeed.</span>
-			<SettingInput key="flat-check-hide-roll-players-can-reveal" label="Players can Reveal" />
-			<span>Allows players to manually reveal results, even when not all flat checks succeeded.</span>
+			<SettingInput key="flat-check-hide-roll-auto-reveal" label="자동 공개" />
+			<span>모든 단순 판정이 성공하면 결과가 자동으로 공개됩니다.</span>
+			<SettingInput key="flat-check-hide-roll-players-can-reveal" label="플레이어 공개 허용" />
+			<span>모든 단순 판정이 성공하지 않더라도 플레이어가 결과를 수동으로 공개할 수 있도록 허용합니다.</span>
 		</div>
 	</SettingSection>
 
 	<SettingSection>
 		<img src="{FlatOnTarget}">
 		<div class="justify-self-start">
-			<h5>Show Flat Check on Target</h5>
+			<h5>대상에 단순 판정 표시</h5>
 			<p>
-				Shows flat check DC and reason when targeting a token. <br>
-				With a token selected, this will use the selected actor's senses (low-light/darkvision) and include conditions like Dazzled.
+				토큰을 대상으로 지정할 때 단순 판정 DC와 사유를 표시합니다. <br>
+				토큰을 선택한 상태에서는 선택된 액터의 감각(약광 시야/암시야)을 사용하고 현혹과 같은 상태도 포함합니다.
 			</p>
-			<SettingInput key="flat-check-target-marker" label="Mode" />
+			<SettingInput key="flat-check-target-marker" label="모드" />
 			<div class="mb-1"></div>
-			<SettingInput key="flat-check-target-marker-display" label="Display" />
+			<SettingInput key="flat-check-target-marker-display" label="표시 방식" />
 		</div>
 	</SettingSection>
 
 	<SettingSection>
 			<div class="col-span-2 mx-[10%]">
-			<h5>Configure Flat Checks</h5>
-			<p>You can turn off which flat checks are shown in messages and on tokens.</p>
-			<p>Note: Light level flat checks are disabled by default and need to be enabled here.</p>
+			<h5>단순 판정 구성</h5>
+			<p>메시지와 토큰에 표시되는 단순 판정을 끌 수 있습니다.</p>
+			<p>참고: 광원 수준 단순 판정은 기본적으로 비활성화되어 있으며 여기서 활성화해야 합니다.</p>
 			<button onclick={() => new FlatMessageConfigApplication().render(true)}>
-				<i class="fa-solid fa-gears"></i> Open Config
+				<i class="fa-solid fa-gears"></i> 설정 열기
 			</button>
 		</div>
 	</SettingSection>
@@ -58,21 +58,21 @@
 	<SettingSection>
 		<img src="{LightVis}">
 		<div class="justify-self-start">
-			<h5>Light Level Visualization</h5>
+			<h5>광원 수준 시각화</h5>
 			<p>
-				Hold <kbd>Alt</kbd> to highlight squares with <span class="text-yellow-700 dark:text-yellow-500">dim light</span>
-				or in <span class="text-red-500">darkness</span>.
+				<kbd>Alt</kbd> 키를 눌러 <span class="text-yellow-700 dark:text-yellow-500">약한 빛</span>이거나
+				<span class="text-red-500">어둠</span>인 칸을 강조 표시합니다.
 			</p>
-			<SettingInput key="light-level-vis" label="Enabled" />
+			<SettingInput key="light-level-vis" label="활성화" />
 		</div>
 	</SettingSection>
 
 	<SettingSection>
 		<div class="col-span-2 mx-[10%]">
-			<h5 class="text-center">Compatibility</h5>
-			<strong>PF2e Visioner Support</strong>
+			<h5 class="text-center">호환성</h5>
+			<strong>PF2e Visioner 지원</strong>
 			<p>
-				If PF2e Visioner is enabled and target flat checks are enabled, Visioner's detection states will also be used for flat checks.
+				PF2e Visioner가 활성화되어 있고 대상 단순 판정이 활성화된 경우, Visioner의 감지 상태가 단순 판정에도 사용됩니다.
 			</p>
 		</div>
 	</SettingSection>

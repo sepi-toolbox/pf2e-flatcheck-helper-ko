@@ -1,0 +1,265 @@
+{
+	"pf2e-fc": {
+		"flat-config": {
+			"stupefied": {
+				"label": "혼미",
+				"note": "혼미 상태에서 주문시전"
+			},
+			"manipulate": {
+				"label": "조작",
+				"note": "붙들림 상태에서 조작 행동"
+			},
+			"deafened": {
+				"label": "귀먹음",
+				"note": "귀먹음 상태에서 청각 행동"
+			},
+			"deafened-spellcasting": {
+				"label": "귀먹음 - 주문시전",
+				"note": "은밀하지 않은 주문은 주문 영창이 필요하며, 모든 말은 청각 특성을 갖습니다."
+			},
+			"target": {
+				"label": "대상",
+				"note": "은닉/은신/현혹/시각상실 등. PF2e Visioner 지원"
+			},
+			"light-level": {
+				"label": "대상 - 광원 수준",
+				"note": "기원이 약광 시야/암시야가 없을 경우 약한 빛/어둠"
+			}
+		},
+		"settings": {
+			"flat-check-in-message": {
+				"name": "메시지에 단순 판정 버튼 표시",
+				"hint": "채팅 메시지에 지원되는 상태에 대한 단순 판정 버튼을 추가합니다."
+			},
+			"flat-check-config": {
+				"name": "단순 판정 설정"
+			},
+			"flat-check-auto-roll": {
+				"name": "단순 판정 자동 굴림",
+				"hint": "메시지의 모든 단순 판정을 자동으로 굴립니다",
+				"choices": {
+					"always": "항상",
+					"user": "사용자 설정",
+					"never": "없음"
+				}
+			},
+			"flat-check-auto-roll-user": {
+				"name": "단순 판정 자동 굴림",
+				"hint": "사용자 설정: 동작은 월드 설정에 따라 달라집니다"
+			},
+			"flat-check-hide-roll": {
+				"name": "단순 판정이 있는 굴림 숨기기",
+				"hint": "굴림에 단순 판정이 필요한 경우, 공개 전까지 결과가 숨겨집니다"
+			},
+			"flat-check-hide-roll-auto-reveal": {
+				"name": "결과 자동 공개",
+				"hint": "모든 단순 판정이 성공하면 결과가 자동으로 공개됩니다"
+			},
+			"flat-check-hide-roll-players-can-reveal": {
+				"name": "플레이어가 결과를 공개할 수 있음",
+				"hint": "모든 단순 판정이 성공하지 않더라도 플레이어가 숨겨진 굴림을 수동으로 공개할 수 있도록 허용합니다"
+			},
+			"flat-check-target-marker": {
+				"name": "토큰에 단순 판정 표시",
+				"hint": "사용자 설정: 대상 지정 시 토큰에 단순 판정 정보를 표시합니다.",
+				"choices": {
+					"enabled": "켜기",
+					"onlyWithOrigin": "기원이 있을 때만",
+					"disabled": "끄기"
+				}
+			},
+			"flat-check-target-marker-display": {
+				"name": "토큰의 단순 판정 표시 방식",
+				"hint": "",
+				"choices": {
+					"all": "외곽선 + 텍스트",
+					"textOnly": "텍스트만",
+					"outlineOnly": "외곽선만"
+				}
+			},
+			"light-level-vis": {
+				"name": "광원 수준 시각화",
+				"hint": "사용자 설정: Alt 키를 눌러 빛이 없거나 약한 칸을 강조 표시합니다."
+			},
+			"delay-combat-tracker": {
+				"name": "전투 트래커에 지연 버튼 표시",
+				"hint": "기본 전투 트래커에 지연/복귀 버튼을 추가합니다."
+			},
+			"delay-token-hud": {
+				"name": "토큰 HUD에 지연 버튼 표시",
+				"hint": "토큰을 우클릭할 때 나타나는 메뉴에 지연/복귀 버튼을 추가합니다."
+			},
+			"delay-return": {
+				"name": "복귀 버튼 활성화",
+				"hint": "지연 버튼을 다시 눌러 우선권으로 돌아갈 수 있도록 합니다."
+			},
+			"delay-prompt": {
+				"name": "새 우선권 위치 선택 프롬프트",
+				"hint": "지연 후 어느 전투원 뒤에 들어갈지 선택할 수 있습니다. 원하는 시점에 언제든 미리 복귀할 수 있습니다."
+			},
+			"delay-create-message": {
+				"name": "지연/복귀 시 채팅 메시지 생성"
+			},
+			"token-hud-remove-combat-toggle": {
+				"name": "토큰 HUD에서 전투 토글 제거",
+				"hint": "전투 중인 토큰의 '전투 상태 토글' 버튼을 제거합니다."
+			},
+			"pf2e-hud-enable": {
+				"name": "PF2e HUD 수정",
+				"hint": "PF2e HUD의 지연 처리를 이 모듈의 구현으로 덮어씁니다. 이와 관련된 문제는 PF2e HUD가 아닌 본 모듈 제작자에게 보고해 주세요!"
+			},
+			"lifelink": {
+				"name": "생명 결속/혼 결속 자동화 버튼 활성화",
+				"hint": "설정 단계는 모듈 readme를 참고하세요."
+			},
+			"lifelink-formular": {
+				"name": "생명 결속 계산식",
+				"hint": "사용할 생명 결속 피해 흡수 방식을 선택합니다.",
+				"choices": {
+					"apg": "표준",
+					"plus": "Oracles+ (고양 (+2))"
+				}
+			},
+			"emanation-automation": {
+				"name": "발산 효과 자동 적용 버튼"
+			},
+			"script-alt-roll-breakdown": {
+				"name": "대체 굴림 내역",
+				"hint": "상황/상태/무유형 굴림 수정자(예: 다중 공격 페널티)를 플레이어에게 공개합니다."
+			},
+			"script-toggle-shared-vision": {
+				"name": "전투 중 공유 시야 토글",
+				"hint": "전투가 시작되면 \"파티 공유 시야\" 메타게임 설정을 자동으로 끄고, 전투가 끝나면 다시 켭니다. 이 설정을 덮어쓰므로, 공유 시야를 사용하고 싶을 때만 활성화하세요."
+			},
+			"headings": {
+				"flat": "단순 판정 버튼",
+				"delay": "지연",
+				"lifelink": "생명 결속",
+				"emanation-automation": "발산 자동화",
+				"misc": "기타"
+			},
+			"docs": {
+				"description": "각 기능에 대한 설명과 설정 세부 사항은 문서를 확인하세요:",
+				"button": "문서 열기"
+			}
+		},
+		"delay": {
+			"return-to-initiative": "우선권으로 복귀",
+			"delay": "지연",
+			"delaying": "지연 중",
+			"errors": {
+				"combat-not-started": "활성 전투 없음",
+				"combatant-not-owned": "현재 전투원을 소유하고 있지 않습니다",
+				"no-active-gm": "연결된 GM 없음"
+			},
+			"dialog": {
+				"delay-after": "다음 전투원 뒤로 지연:",
+				"confirm": "지연",
+				"cancel": "취소"
+			},
+			"actions": {
+				"delay": "지연",
+				"return": "복귀"
+			}
+		},
+		"emanation": {
+			"message-text": "발산 효과 적용",
+			"form-allies": "아군",
+			"form-exclude-self": "자신 제외",
+			"form-enemies": "적",
+			"form-duration-title": "잔류 작곡을 지원하기 위해 적용 시 효과 지속시간을 묻습니다",
+			"form-duration-prompt": "효과 지속시간 물어보기",
+			"form-formatting-error": "형식 오류: 설명에 효과 링크가 없거나 여러 개 있습니다.",
+			"form-fieldset-legend": "자동 발산 효과",
+			"dialog-effect-title": "발산 효과"
+		},
+		"flat": {
+			"flat-check-label": "단순 판정: {label}",
+			"flat-check": "단순 판정",
+			"target-marker-dc": "DC {dc} - {label}",
+			"source": {
+				"blinded": "시각상실",
+				"darkness": "어둠",
+				"hidden": "은신",
+				"dim-light": "약한 빛",
+				"dazzled": "현혹",
+				"concealed": "은닉",
+				"magical-darkness": "마법 어둠"
+			},
+			"message": {
+				"button-close": "닫기",
+				"button-require-flat-check": "{count}개 대상에 단순 판정이 필요합니다",
+				"tooltip-highest-dc": "둘 이상의 단순 판정이 같은 결과를 유발하거나 방지하는 경우, 한 번만 굴리고 가장 높은 DC를 사용합니다.",
+				"reroll-hero-point": "영웅점을 사용해 재굴림",
+				"reroll-new-result": "재굴림 후 새 결과 유지",
+				"reroll-lower-result": "재굴림 후 낮은 결과 유지",
+				"reroll-higher-result": "재굴림 후 높은 결과 유지",
+				"button-reroll": "재굴림",
+				"button-cancel": "취소",
+				"grabbed": "붙들림",
+				"deafened": "귀먹음",
+				"stupefied": "혼미 {value}",
+				"dc": "DC {value}",
+				"hide": {
+					"disabled-tooltip": "GM 전용",
+					"reveal-button": "굴림 공개"
+				}
+			},
+			"more-dialog": {
+				"stupefied": "혼미",
+				"value": "값",
+				"custom": "사용자 지정",
+				"dc": "DC",
+				"title": "추가 단순 판정"
+			},
+			"warning": {
+				"differentLevels": "기원과 대상이 서로 다른 장면 층에 있습니다. 광원 수준 판정을 사용할 수 없습니다."
+			}
+		},
+		"life-link": {
+			"error-no-target": "대상 액터 없음",
+			"error-no-source": "기원 액터 없음",
+			"error-source-is-target": "자신에게 피해를 옮길 수 없습니다!",
+			"no-hp-remaining": "옮길 HP가 남아있지 않습니다.",
+			"life-link-cooldown-effect": "생명 결속 재사용 대기",
+			"hp-add": "{actor} +{hp} HP",
+			"hp-sub": "{actor} -{hp} HP",
+			"spirit-link-error-bad-actor": "{actor}의 혼 결속 효과 기원 액터가 잘못되었습니다! 모듈 readme를 참고하세요.",
+			"spirit-link-button": "{actor}에게 {hp} HP",
+			"spirit-link-message": "<strong>혼 결속</strong><br>{link}",
+			"life-link-error-bad-actor": "{actor}의 생명 결속 효과 기원 액터가 잘못되었습니다! 모듈 readme를 참고하세요.",
+			"share-life-error-bad-actor": "{actor}의 생명 공유 효과 기원 액터가 잘못되었습니다! 모듈 readme를 참고하세요.",
+			"damage-button": "{actor}에게 {damage}",
+			"share-life-damage-button": "(생명 공유) {actor}에게 {damage}",
+			"life-link-damage-button": "(생명 결속) {actor}에게 {damage}",
+			"damage-transfer-message": "<strong>피해 이전</strong><br>{buttons}"
+		},
+		"template": {
+			"buttons": {
+				"grabbed-concealed": "붙들림<br>은닉",
+				"hidden-invisible-confused": "은신<br>투명<br>혼란",
+				"dc": "DC {value}"
+			},
+			"emanation-request": {
+				"effect": "효과",
+				"duration": "지속시간",
+				"rounds": "라운드",
+				"targets": "대상",
+				"apply": "적용",
+				"cancel": "취소"
+			},
+			"message-config-check-types": "판정 종류",
+			"emanation-area": "{origin}, {area} ft"
+		},
+		"common": {
+			"unknown": "알 수 없음"
+		}
+	},
+	"PF2E": {
+		"RuleElement": {
+			"fc-ModifyFlatDC": "단순 DC 수정",
+			"fc-AddCheck": "판정 추가",
+			"fc-TreatAs": "상태 취급"
+		}
+	}
+}

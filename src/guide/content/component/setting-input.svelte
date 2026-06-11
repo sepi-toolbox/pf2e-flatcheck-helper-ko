@@ -2,9 +2,9 @@
 	<strong>{label}</strong>
 
 	{#if missingLibwrapper}
-	<i class="fa-solid fa-cube mx-1 text-red-700" use:tooltip={{text: "Requires lib-wrapper"}}></i>
+	<i class="fa-solid fa-cube mx-1 text-red-700" use:tooltip={{text: "lib-wrapper 필요"}}></i>
 	{:else if locked}
-	<i class="fa-solid fa-lock mx-1 text-orange-500" use:tooltip={{text: "A module controlling client settings is active in this world.\nPlease use the core settings window to change this setting."}}></i>
+	<i class="fa-solid fa-lock mx-1 text-orange-500" use:tooltip={{text: "이 월드에서 클라이언트 설정을 제어하는 모듈이 활성화되어 있습니다.\n이 설정을 변경하려면 코어 설정 창을 사용해 주세요."}}></i>
 	{:else if setting.type === Boolean}
 		<input type="checkbox" class={[disabled && "cursor-not-allowed!"]} disabled={disabled} bind:checked={
 			() => invert ? !value : value,
@@ -27,7 +27,7 @@
 		<i class="fa-solid {icon}"></i>
 	</div>
 	{#if requiresReload}
-		<div class="ml-1" use:tooltip={{text: "Requires reload"}}>
+		<div class="ml-1" use:tooltip={{text: "재시작 필요"}}>
 			<i class="fa-solid fa-rotate-right"></i>
 		</div>
 	{/if}
@@ -49,13 +49,13 @@ const { label, key, invert }: Props = $props()
 
 const setting = game.settings.settings.get(`${MODULE_ID}.${key}`)!
 let icon = "fas fa-earth"
-let tooltipText = "World setting"
+let tooltipText = "월드 설정"
 if (setting.scope === "client") {
 	icon = "fas fa-browser"
-	tooltipText = "Client setting: Changing this setting only affects you, and only in this browser."
+	tooltipText = "클라이언트 설정: 이 설정 변경은 이 브라우저에서 본인에게만 적용됩니다."
 } else if ((setting.scope as string) === "user") {
 	icon = "fas fa-user"
-	tooltipText = "User setting: Changing this setting only affects you."
+	tooltipText = "사용자 설정: 이 설정 변경은 본인에게만 적용됩니다."
 }
 const requiresReload = setting.requiresReload
 

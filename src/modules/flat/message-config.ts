@@ -18,7 +18,7 @@ export class FlatMessageConfigApplication extends foundry.applications.api.Handl
 		id: "fc-flat-check-config",
 		tag: "form",
 		window: {
-			title: "Flat Check Config",
+			title: "단순 판정 설정",
 		},
 		form: {
 			handler: FlatMessageConfigApplication.onSubmit,
